@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('nodejsinactionfrontendApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', ['$scope', 'blogService', function ($scope, blogService) {
+        blogService.getArticles(function(response) {
+            $scope.articles = response.data;
+        })
+    }]);

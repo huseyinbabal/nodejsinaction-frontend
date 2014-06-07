@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="well well-sm">
+            <form class="form-horizontal" ng-submit="submitNewArticle()" ng-controller="ArticleCtrl">
+                <fieldset>
+                    <legend class="text-center">New Article</legend>
+
+                    <!-- Name input-->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="title">Title</label>
+                        <div class="col-md-9">
+                            <input id="title" name="title" type="text" placeholder="Title" class="form-control" ng-model="articleForm.title">
+                        </div>
+                    </div>
+
+                    <!-- Message body -->
+                    <div class="form-group">
+                        <label class="col-md-3 control-label" for="content">Content</label>
+                        <div class="col-md-9">
+                            <textarea class="form-control" id="content" name="content" placeholder="Content" rows="5" ng-model="articleForm.content"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Form actions -->
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
